@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            color: #333;
+            background-color: #1E1E1E;
+            color: #E0E0E0;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,91 +17,130 @@
             min-height: 100vh;
         }
         header {
-            background-color: #4A148C;
-            color: white;
-            padding: 30px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #212121;
         }
-        nav {
-            margin: 0;
-            padding: 15px 0;
-            text-align: center;
-            background-color: #6A1B9A;
-            border-bottom: 1px solid #ddd;
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #76FF03;
         }
         nav a {
-            color: white;
-            margin: 0 20px;
+            color: #E0E0E0;
+            margin: 0 15px;
             text-decoration: none;
             font-size: 18px;
         }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #76FF03;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 40px;
+            background-color: #1E1E1E;
             flex: 1;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
         }
-        .project {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+        .hero-text {
+            max-width: 50%;
         }
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        .hero-text h1 {
+            font-size: 48px;
+            margin: 0 0 20px;
         }
-        .project h3 {
-            margin-top: 0;
-            font-size: 22px;
-            font-weight: 500;
-        }
-        .project p {
+        .hero-text p {
+            font-size: 18px;
             opacity: 0.8;
+            line-height: 1.6;
+            margin: 0 0 40px;
+        }
+        .hero-text a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #76FF03;
+            color: #1E1E1E;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        .hero-text a:hover {
+            background-color: #64DD17;
+        }
+        .hero-image {
+            max-width: 45%;
         }
         footer {
-            background-color: #4A148C;
-            color: white;
+            background-color: #212121;
+            color: #E0E0E0;
             text-align: center;
             padding: 20px;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Owen O'Farrell</h1>
+        <div class="logo">Owen O'Farrell</div>
+        <nav>
+            <a href="#">Latest</a>
+            <a href="#">Modern</a>
+            <a href="#">Contemporary</a>
+            <a href="#">Affordable</a>
+        </nav>
+        <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <div class="container">
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
-            <a href="#">Download</a> | <a href="#">Suggestions/Requests</a>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Latest in Coding Projects</h1>
+            <p>This is the first project from our collection. We're making a huge collection of modern coding projects for various uses, from personal to professional.</p>
+            <a href="#">Check All Projects</a>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
-            <a href="#">Download</a> | <a href="#">Suggestions/Requests</a>
-        </div>
-        <div class="project">
-            <h3>Project 3</h3>
-            <p>Description of project 3.</p>
-            <a href="#">Download</a> | <a href="#">Suggestions/Requests</a>
-        </div>
-        <div class="project">
-            <h3>Project 4</h3>
-            <p>Description of project 4.</p>
-            <a href="#">Download</a> | <a href="#">Suggestions/Requests</a>
+        <div class="hero-image">
+            <img src="lamp.png" alt="Lamp Image" style="width:100%; border-radius: 8px;">
         </div>
     </div>
     <footer>
