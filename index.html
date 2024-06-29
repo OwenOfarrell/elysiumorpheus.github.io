@@ -4,9 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elysium Orpheus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6a0dad;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 0;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #7d4b8a;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .project {
+            background: white;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(30% - 40px);
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Elysium Orpheus</h1>
-    <p>This is a placeholder webpage.</p>
+    <header>
+        <h1>Welcome to Elysium Orpheus</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1.</p>
+                    <a href="#">Download</a> | <a href="#">Suggestions/Requests</a>
+                </div>
+                <div class="project">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2.</p>
+                    <a href="#">Download</a> | <a href="#">Suggestions/Requests</a>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any suggestions, requests, or just want to say hi, feel free to reach out to me!</p>
+            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <!-- Add a contact form or social media links if needed -->
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Elysium Orpheus. All rights reserved.</p>
+    </footer>
 </body>
 </html>
