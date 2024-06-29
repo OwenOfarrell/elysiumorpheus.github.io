@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1E1E1E;
-            color: #E0E0E0;
+            background-color: #1c1c1e;
+            color: #f0f0f0;
             margin: 0;
             padding: 0;
             display: flex;
@@ -21,100 +21,60 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 40px;
-            background-color: #212121;
+            background-color: #121212;
         }
         .logo {
-            font-size: 24px;
+            font-size: 1.5em;
             font-weight: 700;
-            color: #76FF03;
+            color: #60d394;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
         }
         nav a {
-            color: #E0E0E0;
-            margin: 0 15px;
+            color: #f0f0f0;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 1.1em;
         }
-        .toggle-switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        input:checked + .slider {
-            background-color: #76FF03;
-        }
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-        .hero {
+        .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 60px 40px;
-            background-color: #1E1E1E;
+            padding: 50px 40px;
             flex: 1;
         }
-        .hero-text {
+        .text-section {
             max-width: 50%;
         }
-        .hero-text h1 {
-            font-size: 48px;
-            margin: 0 0 20px;
+        .text-section h1 {
+            font-size: 3em;
+            margin: 0 0 20px 0;
         }
-        .hero-text p {
-            font-size: 18px;
-            opacity: 0.8;
-            line-height: 1.6;
-            margin: 0 0 40px;
+        .text-section p {
+            font-size: 1.2em;
+            margin: 0 0 40px 0;
+            color: #d0d0d0;
         }
-        .hero-text a {
+        .text-section a {
             display: inline-block;
+            background-color: #60d394;
+            color: #1c1c1e;
             padding: 15px 30px;
-            background-color: #76FF03;
-            color: #1E1E1E;
-            text-decoration: none;
             border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
             font-weight: 500;
-            transition: background-color 0.3s;
         }
-        .hero-text a:hover {
-            background-color: #64DD17;
-        }
-        .hero-image {
-            max-width: 45%;
+        .image-section img {
+            max-width: 100%;
+            border-radius: 10px;
         }
         footer {
-            background-color: #212121;
-            color: #E0E0E0;
+            background-color: #121212;
+            color: #f0f0f0;
             text-align: center;
-            padding: 20px;
+            padding: 20px 0;
             border-top: 1px solid #333;
         }
     </style>
@@ -123,24 +83,19 @@
     <header>
         <div class="logo">Owen O'Farrell</div>
         <nav>
-            <a href="#">Latest</a>
-            <a href="#">Modern</a>
-            <a href="#">Contemporary</a>
-            <a href="#">Affordable</a>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
         </nav>
-        <label class="toggle-switch">
-            <input type="checkbox">
-            <span class="slider"></span>
-        </label>
     </header>
-    <div class="hero">
-        <div class="hero-text">
-            <h1>Latest in Coding Projects</h1>
-            <p>This is the first project from our collection. We're making a huge collection of modern coding projects for various uses, from personal to professional.</p>
-            <a href="#">Check All Projects</a>
+    <div class="container">
+        <div class="text-section">
+            <h1>Latest in Lighting</h1>
+            <p>This is the first lamp from our company, we're making a huge collection of modern lamps in all categories from home use to office use.</p>
+            <a href="#">Check All Collections</a>
         </div>
-        <div class="hero-image">
-            <img src="lamp.png" alt="Lamp Image" style="width:100%; border-radius: 8px;">
+        <div class="image-section">
+            <img src="path_to_your_image.jpg" alt="Modern Lamp">
         </div>
     </div>
     <footer>
