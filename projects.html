@@ -6,8 +6,8 @@
     <title>Projects - Owen O'Farrell</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             color: #333;
@@ -16,7 +16,7 @@
             min-height: 100vh;
         }
         header {
-            background-color: #6a0dad;
+            background-color: #4A148C;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -25,7 +25,7 @@
             margin: 0;
             padding: 10px 0;
             text-align: center;
-            background-color: #7d4b8a;
+            background-color: #6A1B9A;
         }
         nav a {
             color: white;
@@ -39,20 +39,26 @@
             flex: 1;
         }
         .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         .project {
             background: white;
             margin: 10px;
-            padding: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex: 1 1 calc(30% - 40px);
-            box-sizing: border-box;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        .project h3 {
+            margin-top: 0;
         }
         footer {
-            background-color: #6a0dad;
+            background-color: #4A148C;
             color: white;
             text-align: center;
             padding: 10px 0;
