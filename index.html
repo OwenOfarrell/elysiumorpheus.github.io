@@ -6,8 +6,8 @@
     <title>Owen O'Farrell</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             color: #333;
@@ -16,7 +16,7 @@
             min-height: 100vh;
         }
         header {
-            background-color: #6a0dad;
+            background-color: #4A148C;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -25,7 +25,7 @@
             margin: 0;
             padding: 10px 0;
             text-align: center;
-            background-color: #7d4b8a;
+            background-color: #6A1B9A;
         }
         nav a {
             color: white;
@@ -39,28 +39,26 @@
             flex: 1;
         }
         .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         .project {
             background: white;
             margin: 10px;
-            padding: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex: 1 1 calc(45% - 40px);
-            box-sizing: border-box;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.2s;
         }
-        .project a {
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-            color: #6a0dad;
-            text-decoration: none;
-            font-weight: bold;
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        .project h3 {
+            margin-top: 0;
         }
         footer {
-            background-color: #6a0dad;
+            background-color: #4A148C;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -82,24 +80,24 @@
             <h2>My Recent Projects</h2>
             <div class="projects">
                 <div class="project">
-                    <h3>Owen's Quiz Game</h3>
-                    <p>A fun and challenging quiz game.</p>
-                    <a href="quiz-game.html">Play</a>
+                    <h3>Project 1</h3>
+                    <p>Description of project 1.</p>
+                    <a href="#">Download</a> | <a href="#">Suggestions/Requests</a>
                 </div>
                 <div class="project">
                     <h3>Project 2</h3>
                     <p>Description of project 2.</p>
-                    <a href="#" target="_blank">Play</a>
+                    <a href="#">Download</a> | <a href="#">Suggestions/Requests</a>
                 </div>
                 <div class="project">
                     <h3>Project 3</h3>
                     <p>Description of project 3.</p>
-                    <a href="#" target="_blank">Play</a>
+                    <a href="#">Download</a> | <a href="#">Suggestions/Requests</a>
                 </div>
                 <div class="project">
                     <h3>Project 4</h3>
                     <p>Description of project 4.</p>
-                    <a href="#" target="_blank">Play</a>
+                    <a href="#">Download</a> | <a href="#">Suggestions/Requests</a>
                 </div>
             </div>
         </section>
